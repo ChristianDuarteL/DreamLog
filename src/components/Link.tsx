@@ -6,7 +6,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     untraceable?: boolean;
 }
 
-const Link = React.forwardRef(({to, untraceable, ...props}: Props) => (
+const Link = React.forwardRef(({to, untraceable, ...props}: Props, _) => (
     <LinkElem to={{pathname: to}} state={untraceable ? {} : { prevPath: location.pathname }} {...props} />
 ))
 
