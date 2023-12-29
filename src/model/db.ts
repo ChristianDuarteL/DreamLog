@@ -5,7 +5,7 @@ export class DreamLogDB extends Dexie {
     dreams!: Table<Dream, number>;
 
     constructor(){
-        super(import.meta.env.DB_NAME);
+        super(import.meta.env.VITE_DB_NAME);
         this.version(1).stores({
             dreams: '++id'
         })
