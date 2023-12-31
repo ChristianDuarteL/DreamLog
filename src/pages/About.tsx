@@ -8,7 +8,7 @@ export default function About() {
         <div className='flex-col'>
             <h2>About Dreamlog</h2>
             <p>
-                Dreamlog is a dream journal web application, it is an initiative of <a href="christianduarte.me">Christian Duarte</a>, dreamlog's purpose is to provide a simple way of saving and organizing yesternight's memories.
+                Dreamlog is a dream journal web application, it is an initiative of <a href="https://christianduarte.me">Christian Duarte</a>, dreamlog's purpose is to provide a simple way of saving and organizing yesternight's memories.
             </p>
             <p>
                 This application is client-side only, which means that your information is saved in your device and it's never stored, transferred or managed by our servers in any way.
