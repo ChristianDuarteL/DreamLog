@@ -8,6 +8,7 @@ const Home = lazy(addToLoad(() => import('./pages/Home')));
 const LogDream = lazy(addToLoad(() => import('./pages/LogDream')));
 const About = lazy(addToLoad(() => import('./pages/About')));
 const Dream = lazy(addToLoad(() => import('./pages/Dream')));
+const Settings = lazy(addToLoad(() => import('./pages/Settings')));
 addToLoad(() => import('./model/db').then(e => e.db.open()))
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/dream/:dream_id",
         element: <Dream></Dream>,
+      },
+      {
+        path: "/settings",
+        element: <Settings></Settings>,
       },
     ]
   }
