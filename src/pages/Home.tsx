@@ -33,7 +33,7 @@ export default function Home () {
         <div className='flex-col'>
             <DreamLogConfirmation logDream={logDream}></DreamLogConfirmation>
             <hr className="my-6"/>
-            <ListWrapper listName="History">
+            <ListWrapper listName="History" dataLength={items.length}>
                 <InfiniteScroll
                     dataLength={items.length}
                     hasMore={hasMoreItems}
