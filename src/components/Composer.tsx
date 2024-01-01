@@ -41,7 +41,7 @@ export const Composer = forwardRef<ComposerRef, Props>(({dismiss, className, sen
             <textarea ref={dreamContentsTextarea} id='dreamContents' className='resize-none w-full p-3 bg-primary-800 outline-primary-700 h-96 max-h-[25vh] rounded-md'></textarea>
             <div className='flex justify-end gap-2'>
                 <button type="button" onClick={dismiss} className="self-end rounded-md px-3 py-2 text-sm font-semibold text-neutral-100 shadow-sm control-outline outline-offset-0 focus-visible:outline-neutral-100 active:text-neutral-300 active:outline-neutral-300">Cancel</button>
-                <button type="submit" className="rounded-md bg-secondary-800 px-3 py-2 text-sm font-semibold text-white shadow-sm active:bg-secondary-900 control-outline-primary ">Log dream</button>
+                <button type="submit" className="rounded-md bg-secondary-800 px-3 py-2 text-sm font-semibold text-white shadow-sm active:bg-secondary-900 control-outline-secondary">Log dream</button>
             </div>
         </form>
     );
