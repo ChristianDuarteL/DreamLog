@@ -9,7 +9,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 const Link = React.forwardRef(({to, untraceable, ...props}: Props, _) => {
     const location = useLocation();
     return (
-        <LinkElem to={{pathname: to}} state={untraceable ? {} : { prevPath: to == location.pathname ? location.state.prevPath : location.pathname }} {...props} />
+        <LinkElem to={{pathname: to}} state={untraceable ? {} : { prevPath: to == location.pathname ? location.state?.prevPath : location.pathname }} {...props} />
     );
 })
 
