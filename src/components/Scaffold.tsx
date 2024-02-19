@@ -48,13 +48,6 @@ export function Header({backUrl}: HeaderProps) {
                         <div className="py-2">
                             <Menu.Item>
                                 {({ active }) => (
-                                    <Link to='/settings' className={`${active ? 'bg-primary-700 text-primary-100' : 'text-primary-100'} block px-4 py-2 text-sm`}>
-                                        Settings
-                                    </Link>
-                                )}
-                            </Menu.Item>
-                            <Menu.Item>
-                                {({ active }) => (
                                     <Link to='/about' className={`${active ? 'bg-primary-700 text-primary-100' : 'text-primary-100'} block px-4 py-2 text-sm`}>
                                         About DreamLog
                                     </Link>

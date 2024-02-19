@@ -2,6 +2,8 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../model/db";
 import { useLocation, useParams } from "react-router-dom";
 import useSetBackUrl from "../hooks/useSetBackUrl";
+import { FaPen, FaTrash } from "react-icons/fa";
+import Link from "../components/Link";
 
 export default function Dream() {
     const { dream_id_param } = useParams();
@@ -10,7 +12,14 @@ export default function Dream() {
     const location = useLocation();
     useSetBackUrl(location?.state?.prevPath ?? '/')
     return <div>
-        <h1>{dream?.title}</h1>
+        <div className="flex justify-between">
+            <h1>{dream?.title}</h1>
+            <div className="flex gap-1">
+                <Link to={'/edit/' + dream_id} className={`flex items-center justify-center relative w-10 h-10 text-lg p-2 rounded-md hover:bg-primary-700 active:bg-primary-800`}>
+                    <FaPen></FaPen>
+                </Link>
+            </div>
+        </div>
         <p>{dream?.contents}</p>
     </div>
 }
