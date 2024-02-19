@@ -6,7 +6,7 @@ import { FaPen, FaTrash } from "react-icons/fa";
 import Link from "../components/Link";
 
 export default function Dream() {
-    const { dream_id_param } = useParams();
+    const { dream_id: dream_id_param } = useParams();
     const dream_id = dream_id_param ? parseInt(dream_id_param) : 1;
     const dream = useLiveQuery(() => db.dreams.get(dream_id), [dream_id]);
     const location = useLocation();

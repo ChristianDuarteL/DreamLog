@@ -1,5 +1,5 @@
 import Dexie, { Table } from "dexie";
-import { Dream } from "./Dream";
+import { Dream, UpdateDream } from "./Dream";
 
 export class DreamLogDB extends Dexie {
     dreams!: Table<Dream, number>;
@@ -18,6 +18,14 @@ export class DreamLogDB extends Dexie {
             createdAt: date.getTime()
         }
         return this.dreams.add(dream);
+    }
+    
+    updateDream(id: number, title: string, contents: string){
+        const dream: UpdateDream = {
+            title, 
+            contents
+        }
+        return this.dreams.update(id, dream);
     }
 }
 

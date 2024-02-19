@@ -14,7 +14,7 @@ export default function EditDream ({...props}: ComposerProps){
     const location = useLocation();
     useSetBackUrl(location?.state?.prevPath ?? '/')
 
-    const { dream_id_param } = useParams();
+    const { dream_id: dream_id_param } = useParams();
     const dream_id = dream_id_param ? parseInt(dream_id_param) : 1;
     const dream = useLiveQuery(() => db.dreams.get(dream_id), [dream_id]);
 
@@ -30,7 +30,7 @@ export default function EditDream ({...props}: ComposerProps){
             }
             send={e => {
                 db
-                .saveDream(e.title, e.contents, new Date())
+                .updateDream(dream_id, e.title, e.contents)
                 .then(() => {
                     navigate('/');
                 })
